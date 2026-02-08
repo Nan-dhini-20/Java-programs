@@ -1,0 +1,10 @@
+class CarsCollections 
+{
+	public static void main(String[] args) 
+	{
+		System.out.println("Hyundai Creta");
+		System.out.println("Mahindra Thar");
+		System.out.println("Toyota Fortuner");
+		System.out.println("Maruti Suzuki Wagon R");
+	}
+}

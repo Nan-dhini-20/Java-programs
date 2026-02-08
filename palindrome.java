@@ -1,0 +1,30 @@
+import java.util.Scanner;
+class palindrome 
+{
+	public static void main(String[] args) 
+	{
+		Scanner sc=new Scanner(System.in);
+		System.out.println("Enter any number:");
+		int num=sc.nextInt();
+		int rev=0;
+		int org=num;
+		while(num>0)
+		{
+			int ld=num%10;
+			num=num/10;
+			rev=rev*10+ld;     //  Execution: rev=0; num=534;  so rev=rev*10+ld   =>   1. rev=0*10 + 4 => rev=4  2. rev=4*10 + 3 => rev=43  3. rev=43*10 + 5 => rev=435
+		}
+		
+		System.out.println("Reverse num is:"+rev);
+		if(org==rev)
+		{
+			System.out.println(org+" is a palindrome");
+		}
+		else
+		{
+			System.out.println(org+" is not a palindrome");
+		}
+			
+			
+	}
+}

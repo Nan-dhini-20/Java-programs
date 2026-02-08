@@ -1,0 +1,86 @@
+import java.util.Scanner;
+class ATM
+{
+	static Scanner sc = new Scanner (System.in);
+	public static void main(String[] args)
+		{
+			System.out.println( "1. Check Balance \n2. Deposit \n3. Withdraw \n4. Change pinno");
+			
+			System.out.print("select any option:");
+			
+			int option = sc.nextInt();
+			
+			double balance = 2000.00;
+			Long regPhno= 9551716286L;
+			int pinno= 2625;
+			
+			switch(option)
+			{
+				case 1:
+					System.out.println("Welcom Ms. Nandhini");
+					System.out.println("you have" +balance + "rs in your bank account");
+					break;
+				case 2:
+					System.out.print("Enter the amount you want to deposit: ");
+					double deposit=sc.nextDouble();
+					balance += deposit;
+					System.out.println("Deposit done successfully");
+					System.out.println("Your current balance is: "+balance+" rs");
+					break;
+					
+				case 3:
+					System.out.print("Enter your pin: ");
+					int userpin = sc.nextInt();
+					
+					if(userpin == pinno){
+						System.out.print("Enter the amount you want to withdraw: ");
+						double withdraw = sc.nextDouble();
+						
+						if(withdraw <= balance)
+						{
+							balance += withdraw;
+							System.out.println("after withdrawl your current amount is: "+balance+ "rs");
+						}
+						else
+							System.out.println("Insufficient balance");
+					}
+					else{
+					System.out.println("Wrong pin no");
+					}
+					break;
+				case 4:
+					System.out.print("Enter your registered phone number: ");
+					Long phno = sc.nextLong();
+					
+					if(regPhno== phno)
+					{
+					
+						int otp = (int) (Math.random()*9860) + 1000;
+						System.out.println("your otp is: "+otp);
+						System.out.print("Enter the otp: ");
+						int userOtp = sc.nextInt();
+						
+						if(otp==userOtp)
+							{
+							System.out.print("Enter your updated pin: ");
+							int newpin = sc.nextInt();
+							pinno = newpin;
+							System.out.println("pincode is: "+pinno);
+							System.out.println("your pin code has been updated");
+						}
+						else
+						{
+							System.out.println("Wrong otp");
+						}
+					}
+					else
+					{
+						System.out.println("Wrong mobile number");
+					}
+					break;
+					   
+				default: System.out.println("Give valid option");
+				}
+		}
+}
+		

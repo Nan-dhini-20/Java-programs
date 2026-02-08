@@ -1,0 +1,46 @@
+import java.util.Scanner;
+class studentBio 
+{
+	public static void main(String[] args) 
+	{
+		Scanner sc =new Scanner(System.in);
+		
+		System.out.print("Student Name: ");
+		String name= sc.nextLine();
+		
+		System.out.print("Student Age: ");
+		byte age= sc.nextByte();
+		
+		System.out.print("Class Year: ");
+		short year= sc.nextShort();
+		
+		System.out.print("Roll Number: ");
+		int rollno= sc.nextInt();
+		
+		System.out.print("Phone Number: ");
+		long Phoneno= sc.nextLong();
+		
+		System.out.print("Percentage: ");
+		float Percentage= sc.nextFloat();
+		
+		System.out.print("Average Marks: ");
+		double avgMarks= sc.nextDouble();
+		
+		System.out.print("Grade: ");
+		char Grade= sc.next().chartAt(0);
+		
+		System.out.print("Is Student Passed: ");
+		boolean Pass= sc.nextBoolean();
+		
+		System.out.println("\nStudent Bio");
+		System.out.println("Student Name: "+name);
+		System.out.println("Student Age: "+age);
+		System.out.println("Class Year: "+year);
+		System.out.println("Roll Number: "+rollno);
+		System.out.println("Phone Number: "+Phoneno);
+		System.out.println("Percentage: "+Percentage);
+		System.out.println("Average Marks: "+avgMarks);
+		System.out.println("Grade: "+Grade);
+		System.out.println("Is Student Passed: "+Pass);
+	}
+}
