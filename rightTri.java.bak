@@ -1,11 +1,11 @@
-class Pyramid1 
+class rightTri 
 {
 	public static void main(String[] args) throws Exception 
 	{
-		int n=7;
+		int n=5;
 		for(int i=0;i<n;i++){
 			for(int j=0;j<n;j++){
-				if(i>=j && i+j<=n-1){
+				if(i<=j){
 					System.out.print("* ");
 				}
 				else{
@@ -13,20 +13,8 @@ class Pyramid1
 				}
 				Thread.sleep(100);
 			}
-			System.out.println();
+					
+		System.out.println();
 		}
 	}
 }
-
-
-/*
-
-*
-* *
-* * *
-* * * *
-* * *
-* *
-*
-
-*/

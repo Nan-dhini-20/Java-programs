@@ -1,0 +1,28 @@
+import java.util.Scanner;
+class BinaryToDecimal 
+{
+	public static Scanner sc=new Scanner(System.in);
+	public static int convertDecimal(int n)
+	{
+		int sum=0;
+		int base=1;
+		  
+		while(n>0)
+		{
+			int ld=n%10;
+			sum=sum+ld*base;
+			n=n/10;
+			
+			base=base*2;
+		}
+		return sum;
+	}
+	public static void main(String[] args) 
+	{
+		System.out.print("Enter only Binary Number: ");
+		int binary=sc.nextInt();
+		int decimal=convertDecimal(binary);
+		
+		System.out.println("decimal value is: "+decimal);
+	}
+}

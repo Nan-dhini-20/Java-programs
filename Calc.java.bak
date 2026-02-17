@@ -1,0 +1,22 @@
+class Calc
+{
+	public static void add(){   //call func
+		int n1=35;
+		int n2=48;
+		
+		int add=n1+n2;
+		System.out.println("Addition of two nums:"+add);
+	}
+	public static void sub(int a, int b)
+	{
+		int sub=a-b;
+		System.out.println("Subtraction of two nums:"+sub);
+		
+	}
+		
+	public static void main(String[] args) 
+	{
+		add(); //calling func
+		sub(280, 93);
+	}
+}

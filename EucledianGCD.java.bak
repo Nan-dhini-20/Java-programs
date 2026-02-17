@@ -1,0 +1,25 @@
+import java.util.Scanner;
+class EucledianGCD 
+{
+	public static Scanner sc=new Scanner(System.in); 
+	public static int gcd(int a, int b) throws Exception
+	{
+		System.out.println("gcd(" +a+","+b+")");
+		Thread.sleep(1000);
+		if(b==0)
+			return a;
+		return gcd(b,a%b);
+		
+	}
+	public static void main(String[] args) 
+	{
+		System.out.println("Number1: ");
+		int m=sc.nextInt();
+		System.out.println("Number2: ");
+		int n=sc.nextInt();
+		
+		int ans=gcd(m,n);
+		System.out.println("GCD is: "+ans);
+		
+	}
+}
