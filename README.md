@@ -15,7 +15,8 @@ The repository includes Java programs related to:
 - Conditional statements  
 - Loops  
 - Number-based programs  
-- Pattern programs  
+- Pattern programs
+- Ecxeption handling
 - Logical problem solving  
 - Beginner-level algorithms  
 
